@@ -1,54 +1,29 @@
+# Banking CRUD Service
 
-# CURL Requests
+This is a simple Banking CRUD API built using Java and Spring Boot. The project demonstrates basic Create, Read, Update, and Delete operations for managing bank account records through REST APIs.
 
-### 1. Create a Customer
+## Features
 
-```bash
-curl -X POST http://localhost:8080/api/customers \
-  -H "Content-Type: application/json" \
-  -d '{
-        "firstName": "John",
-        "lastName": "Doe",
-        "email": "john.doe@example.com",
-        "phoneNumber": "1234567890"
-      }'
-```
+* Create a bank account
+* View account details
+* Update account information
+* Delete an account
 
----
+## Tech Stack
 
-### 2. Get All Customers
+* Java
+* Spring Boot
+* Spring Data JPA
+* Maven
+* MySQL / PostgreSQL
 
-```bash
-curl -X GET http://localhost:8080/api/customers
-```
----
+## API Endpoints
 
-### 3. Get Customer by ID
+POST /accounts – Create account
+GET /accounts/{id} – Get account by id
+PUT /accounts/{id} – Update account
+DELETE /accounts/{id} – Delete account
 
-```bash
-curl -X GET http://localhost:8080/api/customers/1
-```
+## Run
 
----
-
-### 4. Update a Customer
-
-```bash
-curl -X PUT http://localhost:8080/api/customers/1 \
-  -H "Content-Type: application/json" \
-  -d '{
-        "firstName": "Jane",
-        "lastName": "Smith",
-        "email": "jane.smith@example.com",
-        "phoneNumber": "9876543210"
-      }'
-```
-
----
-
-### 5. Delete a Customer
-
-```bash
-curl -X DELETE http://localhost:8080/api/customers/1
-```
-"# Crud-App" 
+Clone the project, configure the database in `application.properties`, and run the Spring Boot application.
